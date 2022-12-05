@@ -1,34 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>Document</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-      <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <div class="main">
-          <div class="top"></div>
-          <h1>To-Do List</h1>
-         
-          <form>
-             <input id="text" type="text" placeholder="Enter a new task...">
-          
-             <div class="list-container">
-                 <ul class="list"></ul>
-             </div>
-  
-             <div class="button">
-               <div class="plas">
-                 +
-                </div>
-                <button id="addto">
-                  Add to
-                </button>
-              </div>
-          </form>
-      </div>
-      
-      <script src="./style.js"></script>
-    </body>
-    </html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Coverter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    
+<header>
+    <div>
+        <img src="Asset 1@3x 1.svg" alt="">
+    </div>
+    <div>
+        <ul>
+            <li>Bank</li>
+            <li>Biznes</li>
+            <li>İnvestisiyalar</li>
+            <li>Sığorta</li>
+            <li>Mobil</li>
+            <li>Səyahət</li>
+            <li>Əyləncə</li>
+        </ul>
+    </div>
+    <div>
+        <button>Daxil ol</button>
+    </div>
+</header>
+
+<main>
+    <h1>Onlayn valyuta çeviricisi</h1>
+    <div class="content">
+        <div class="first-content box">
+            <p>Səbətdə var</p>
+            <div class="first-box">
+                <button class="selected">RUB</button><button>USD</button><button>EUR</button><button>GBP</button>
+            </div>
+            <form class="in safe">
+                <input type="number">
+                <p></p>
+            </form>
+        </div>
+        <div class="second-content box">
+            <p>Almaq istəyirəm</p>
+            <div class="second-box">
+                <button class="selected">RUB</button><button>USD</button><button>EUR</button><button>GBP</button>
+            </div>
+            <div class="out safe">
+                <input type="number">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+    <script src='source.js'></script>
+</body>
+</html>

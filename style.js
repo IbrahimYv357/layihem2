@@ -1,66 +1,65 @@
-const todoInput = document.querySelector('#text');
-const todoButton = document.querySelector('#addto');
-const todoList = document.querySelector('.list');
-const main = document.querySelector('.list-container');
+let button = document.querySelectorAll('.first-box button');
+let secondButton = document.querySelectorAll('.second-box button');
+let p = document.querySelector('.in p');
+let p2 = document.querySelector('.out p');
+let x = "1 RUB",y = "1 RUB",any;
+p.innerHTML = x+" = "+y;
+let base='RUB',symbols='RUB';
 
-todoButton.addEventListener("click", todos);
-todoList.addEventListener("click", deleteList);
+let input = document.querySelector('.in input')
+let output = document.querySelector('.out input')
 
+button.forEach((item)=>{
+    item.addEventListener('click',(e)=>{
+        x = "1 "+ e.target.innerText;
+        base = e.target.innerText;
+        myFunction();
+        if(e.target){
+            e.target.class = 'active';
+            let notButton = document.querySelectorAll('.first-box button:not(button.active)');
+            notButton.forEach((element)=>{
+                element.style.background = 'white';
+                element.style.color = '#E5E5E5';
+            })
+            e.target.style.background = '#833AE0';
+            e.target.style.color = 'white';
+        }
+    })
+})
 
+secondButton.forEach((element)=>{
+    element.addEventListener('click',(a)=>{
+        symbols = a.target.innerText;
+        myFunction();
+        if(a.target){
+            a.target.class = 'active';
+            let notButton = document.querySelectorAll('.second-box button:not(button.active)');
+            notButton.forEach((element)=>{
+                element.style.background = 'white';
+                element.style.color = '#E5E5E5';
+            })
+            a.target.style.background = '#833AE0';
+            a.target.style.color = 'white';
+        }
+    })
+})
 
-function todos(e){
+async function myFunction(){
+    let q = await fetch(`https://api.exchangerate.host/latest?base=${base}&symbols=${symbols}`)
+    let d = await q.json();
+    any = d.rates[symbols];
+    input.oninput = function(){
+        output.value = (any * input.value).toFixed(2);
+    }
+    output.oninput = function(){
+        input.value = (1/any * output.value).toFixed(2);
+    }
+    if(input.value != 0){
+        output.value = (any * input.value).toFixed(2);
+    }
+    y = any.toFixed(2) + " " + symbols;
+    p.innerHTML = x+" = "+y;
+    p2.innerHTML = "1 "+ symbols +" = "+(1/any).toFixed(2) + " " + base;
+}  
 
-  e.preventDefault();
-
-  
-  if(todoInput.value.trim().length > 5){
-  main.style.display = "block";
-  const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todos");
-
-  const newList = document.createElement('li');
-  newList.innerText = todoInput.value;
-  newList.classList.add('liststyle');
-  todoDiv.appendChild(newList);
-
-  const delBtn = document.createElement('button');
-  delBtn.innerHTML = '<i id="icon" class="fa fa-close"></i>';
-  delBtn.classList.add('del');
-  todoDiv.appendChild(delBtn);
-
-  todoList.appendChild(todoDiv);
-  todoInput.value = "";
-  console.log("Task added Succesfully.");
-  }else{
-    alert("Please enter a acceptable task!");
-    todoInput.value = "";
-  }
-}
-
-
-function deleteList(e){
-  e.preventDefault();
-
-  const target = e.target;
-  const main = document.querySelector('.list-container');
-  
-  if(target.classList[0] === "del"){
-    const delList = target.parentElement;
-    delList.classList.add('fall');
-    delList.addEventListener('transitionend', () => {
-    delList.remove();
-    
-
-    console.log(main.innerText);
-    
-      if(main.innerText.length== 0){
-        main.style.visibility = 'hidden';
-      }else{
-        main.style.visibility = 'visible';
-      }
-      
-    });
-  }
-
-
-}
+myFunction();
