@@ -1,61 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <title>Coverter</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    
-<header>
-    <div>
-        <img src="Asset 1@3x 1.svg" alt="">
-    </div>
-    <div>
-        <ul>
-            <li>Bank</li>
-            <li>Biznes</li>
-            <li>İnvestisiyalar</li>
-            <li>Sığorta</li>
-            <li>Mobil</li>
-            <li>Səyahət</li>
-            <li>Əyləncə</li>
-        </ul>
-    </div>
-    <div>
-        <button>Daxil ol</button>
-    </div>
-</header>
+    <div class="conteiner">
+        <div class="header">
+            <div class="headerTag">
+                <div class="headerLeft">
+                    <img src="./photo/Asset 1@3x 1.png">
+                </div>
+                <div class="headerCenter">
+                    <ul>
+                        <li>Bank</li>
+                        <li>Biznes</li>
+                        <li>Valyuta</li>
+                        <li>Siğorta</li>
+                        <li>Mobil</li>
+                        <li>Səyahət</li>
+                        <li>Əyləncə</li>
+                    </ul>
 
-<main>
-    <h1>Onlayn valyuta çeviricisi</h1>
-    <div class="content">
-        <div class="first-content box">
-            <p>Səbətdə var</p>
-            <div class="first-box">
-                <button class="selected">RUB</button><button>USD</button><button>EUR</button><button>GBP</button>
-            </div>
-            <form class="in safe">
-                <input type="number">
-                <p></p>
-            </form>
-        </div>
-        <div class="second-content box">
-            <p>Almaq istəyirəm</p>
-            <div class="second-box">
-                <button class="selected">RUB</button><button>USD</button><button>EUR</button><button>GBP</button>
-            </div>
-            <div class="out safe">
-                <input type="number">
-                <p></p>
+                </div>
+                <div class="headerRight">
+                    <button class="btn3"> <strong>Çıxış</strong></button>
+
+                </div>
+
             </div>
         </div>
-    </div>
-</main>
+        <div class="body">
+            <div class="bodyTop">
+                <h1>Onlayn Valyuta Hesablayıcı</h1>
+            </div>
+            <div class="bodyBottom">
+                <div class="bodyBottomLeft">
+                    <div class="bodyBottomLeftTop">
+                        <div class="bodyBottomLeftTopTop">
+                            <p>Mənim varımdır:</p>
+                        </div>
+                        <div class="bodyBottomLeftTopBottom">
+                            <ul class="ulBottomLeft">
+                                <li class="liBottomLeft a">RUB</li>
+                                <li class="liBottomLeft b">USD</li>
+                                <li class="liBottomLeft c">EUR</li>
+                                <li class="liBottomLeft d">GBP</li>
+                            </ul>
+                        </div>
 
+                    </div>
+                    <div class="bodyBottomLeftBottom">
+                        <div class="leftInput">
+                            <input class="inpute" type="text" >
+                        </div>
+                        <div class="infoLeft">
+                            <p  class="leftP"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bodyBottomRight">
 
+                    <div class="bodyBottomRightTop">
+                        <div class="bodyBottomRightTopTop">
+                            <p>Mən almaq isteyirem:</p>
+                        </div>
+                        <div class="bodyBottomRightTopBottom">
+                            <ul class="ulBottomRight">
+                                <li class="liBottomRight e">RUB</li>
+                                <li class="liBottomRight f"> USD</li>
+                                <li class="liBottomRight g" >EUR</li>
+                                <li class="liBottomRight h">GBP</li>
+                            </ul>
+                        </div>
+                        <div class="bodyBottomRightBottom">
+                            <div class="rightInput">
+<p class="input2"></p>
+                            </div>
+                            <div class="infoRight">
+                                <p class="rightP"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src='source.js'></script>
 </body>
+<script src="./index.js"></script>
+
 </html>

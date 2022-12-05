@@ -1,124 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-*{
+* {
     margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-header{
-    width: 100%;
+
+.headerTag {
     background-color: #F5F5F6;
-    height: 50px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-ul{
-    display: flex;
-    flex-direction: row;
-}
-ul li{
-    margin: 0 20px 0 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #959BA4;
-}
-
-header button{
-    border: none;
-    background-color: white;
-    padding: 10px;
-    font-size: 11px;
-    font-weight: 500;
-}
-
-main{
-    width: calc(100%*14/24);
-}
-
-h1{
-    margin-top: 50px;
-    font-size: 50px;
-}
-
-.content{
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+ul {
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    justify-content: space-around;
+
+    list-style: none;
 }
 
-.box{
-    width: 50%;
+li {
+
+    margin: 20px;
 }
 
-.box button{
-    width: calc(90%*1/4);
-    height: 50px;
-    border: 1px solid #E5E5E5;
-    color: #E5E5E5;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-}
-.box button:first-of-type{
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background: #833AE0;
-    color: white;
+img {
+    margin-left: 100px;
+    width: 90px;
 }
 
-.box p{
+.headerCenter {
+    margin-right: 100px;
     font-size: 15px;
-    color: #9F9F9F;
-    padding: 5px;
 }
 
-.box button:last-of-type{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.active {
-    background-color: #833AE0;
+.headerRight {
+    margin-right: 102px;
+
 }
 
-
-.safe{
-    margin-top: 20px;
-    border: 1px solid #E5E5E5;
-    width: 90%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 20px;
+button {
+    width: 58px;
+    height: 38px;
+    background-color: white;
     border-radius: 5px;
+    border: #F5F5F6;
 }
 
-.safe input {
-    font-size: 40px;
+
+
+
+
+/* Botttom Hisse */
+h1 {
+    display: flex;
+    margin-left: 300px;
+    margin-top: 150px;
+}
+
+.bodyBottom {
+    display: flex;
+    margin-left: 300px;
+    height: 30vh;
+    margin-top: 30px;
+
+
+}
+
+
+/* BottomLeft */
+
+
+
+.ulBottomLeft {
+
+    margin: 0px;
+    padding: 0px;
+    width: 260px;
+}
+
+.ulBottomLeft li {
+    color: #C6C6C6;
+    padding: 10px;
+
+    border: 1px solid #9F9F9F;
+    width: 100%;
+    text-align: center;
+
+    margin: 0px;
+
+}
+
+.bodyBottomLeftTopTop {
+    color: #9F9F9F;
+
+}
+
+.leftInput input {
+    margin-top: 11px;
+
+    margin-left: 14px;
+    height: 49px;
+    border-color: white;
+    width: 197px;
     border: none;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+    outline: none;
+    font-size: 30px;
+
 }
 
-input:focus{
-    outline: none;
+
+.bodyBottomLeftBottom {
+    margin-top: 20px;
+
+    border: 1px solid #9F9F9F;
+
+}
+
+.infoLeft p {
+    margin-left: 16px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
+}
+
+/* bodyBottomRight */
+
+
+.bodyBottomRight {
+    margin-left: 137px;
+}
+
+.ulBottomRight {
+
+    margin: 0px;
+    padding: 0px;
+    width: 260px;
+
+}
+
+.ulBottomRight li {
+    color: #C6C6C6;
+    padding: 10px;
+
+    border: 1px solid #9F9F9F;
+    width: 100%;
+    text-align: center;
+
+    margin: 0px;
+
+}
+
+.bodyBottomRightTopTop {
+    color: #9F9F9F;
+
+}
+
+.rightInput p {
+    margin-top: 11px;
+    width: auto;
+    margin-left: 14px;
+    height: 49px;
+    border-color: none;
+    border: none;
+    font-size: 35px;
+
+}
+
+.bodyBottomRightBottom {
+    margin-top: 20px;
+    width: auto;
+    border: 1px solid #9F9F9F;
+
+}
+
+.infoRight p {
+    margin-left: 16px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
 }
